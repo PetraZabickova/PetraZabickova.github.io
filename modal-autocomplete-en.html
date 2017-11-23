@@ -1,0 +1,82 @@
+<h2>Tips for searching in examples</h2>
+
+<ul>
+	<li><strong><code>Edgar Allan Poe</code></strong><br />
+	multi-word term search <strong>results prioritize</strong> search term <strong>equivalence to author names</strong> (in order <code>name surname</code>) <strong>and main publication titles</strong>.</li>
+</ul>
+
+<ul>
+	<li><strong><code>&quot;Poe&#39;s Raven&quot;</code></strong> - <em>Domestic and International resources</em><br />
+	search <strong>phrase between quotation marks, i. e.</strong><strong> </strong><strong><code>Poe&#39;s Raven</code></strong></li>
+</ul>
+
+<ul>
+	<li><strong><code>Poe AND Raven</code></strong> - <em>Domestic and International resources</em><br />
+	search terms containing<strong> <code>Poe</code> as well as <code>Raven</code></strong></li>
+</ul>
+
+<ul>
+	<li><strong><code>Poe OR Raven</code></strong> - <em>Domestic and International resources</em><br />
+	search terms containing <strong>at least one of the words</strong><strong> </strong><code>Poe</code><strong> or </strong><code>Raven</code></li>
+</ul>
+
+<ul>
+	<li><strong><code>Poe NOT Raven</code></strong> - <em>Domestic and International resources</em><br />
+	<strong><code>Poe -Raven</code></strong> - <em>Domestic Resources</em><br />
+	search terms <strong>containing <code>Poe</code> and not containing <code>Raven</code></strong></li>
+</ul>
+
+<ul>
+	<li><strong><code>poe AND (raven OR (life AND work))</code></strong> - <em>Domestic and International resources</em><br />
+	you can use <strong>parentheses</strong> (even nested) to make advanced queries<br />
+	searching is <strong>not case sensitive</strong> and <strong>ignores punctation and diacritics</strong></li>
+</ul>
+
+<ul>
+	<li><strong><code>+Poe Raven</code></strong> - <em>Domestic resources</em><br />
+	search terms <strong>necessarily containing</strong><strong> <code>Poe</code></strong> and <strong>possibly containing</strong><strong> <code>Raven</code></strong></li>
+</ul>
+
+<ul>
+	<li><strong><code>R*ven</code></strong> - <em>Domestic resources</em> (cannot be used in the beginning of the term)<br />
+	<strong><code>Rave*</code></strong> - <em>International resources</em> (truncation symbol; cannot be used with <code>?</code> and <code>#</code>)<br />
+	search terms <strong>with empty or random string of characters in place of <code>*</code></strong> (you cannot use that in the beginning of the word)</li>
+</ul>
+
+<ul>
+	<li><strong><code>R?ven</code></strong> - <em>Domestic and International resources</em><br />
+	search terms begining with <code>R</code> and ending with <code>ven</code> <strong>with one character in place of <code>?</code></strong> (you cannot use that in the beginning of the term)</li>
+</ul>
+
+<ul>
+	<li><strong><code>R#ven</code></strong> - <em>International resources</em><br />
+	search terms begining with <code>R</code> and ending with <code>ven</code> <strong>with one or zero character in place of <code>#</code></strong> (you cannot use that in the beginning of the term)</li>
+</ul>
+
+<ul>
+	<li><code><strong>Raven~</strong></code><strong> /</strong><code><strong> Raven~0.8</strong></code> - <em>Domestic resources</em><br />
+	search terms <strong>similar to</strong><strong> </strong><code>Raven</code><strong> (Haven, Ravel)</strong>; degree of similarity is defined by setting value from 0 to 1 (default is 0.5)</li>
+</ul>
+
+<ul>
+	<li><code><strong>&quot;Poe Raven&quot;~3</strong></code> - <em>Domestic resources</em><br />
+	<code><strong>Poe N3 Raven</strong></code> - <em>International resources</em><br />
+	<strong>proximity search</strong>; search terms with <strong>at most three words between</strong> <code>Poe</code><strong> and </strong><code>Raven</code> (regardless of the order)</li>
+</ul>
+
+<ul>
+	<li><code><strong>Poe W3 Raven</strong></code> - <em>International resources</em><br />
+	<strong>proximity search</strong>; search terms with <strong>at most three words between</strong> <code>Poe</code><strong> and </strong><code>Raven</code> (in this order)</li>
+</ul>
+
+<ul>
+	<li><code><strong>Poe Raven^8 poetry^6</strong></code> - <em>Domestic resources</em><br />
+	<strong>preferential search</strong> where<strong> the word significanceis given by the value after <code>^</code></strong> (a term without <code>^</code> has the lowest value)</li>
+</ul>
+
+<ul>
+	<li><strong><code>{Po TO Pr}</code> / <code>[2001 TO 2003]</code></strong> - <em>Domestic resources</em><br />
+	<strong>range search</strong> (terms begining with Po, Pp, Pq and Pr / numbers from 2001 to 2003)</li>
+</ul>
+
+<p>International resources are indexed by the third side - that is why some operators are different.</p>
